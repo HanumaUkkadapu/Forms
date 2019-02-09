@@ -39,10 +39,10 @@ body{
 	/* add back negative margin value */
 	/*margin: 0 -9999rem;*/
 	margin: -5px;
-	padding: 10px 50px 70px 50px; 
+	padding: 10px 0px 70px 0px;
 	text-align: center;
 	background-color: blue;
-	min-width: 320px;
+	/*min-width: 320px;*/
 }
 h1 {
 	font-family: 'Francois One';
