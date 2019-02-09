@@ -19,6 +19,7 @@ body {
 	background-color: var(--bluelight);
 }
 */
+/*
 html, body{
 	margin: 0;
 	padding: 0;
@@ -27,6 +28,7 @@ html, body{
 	font-size: 100%;
 	vertical-align: baseline;
 }
+*/
 body{
 	background: orange;
 }
@@ -34,7 +36,8 @@ body{
 	width: 100%;
 	color: yellow;
 	font-size: 1.1em;
-	margin: 0;
+	/* add back negative margin value */
+	margin: 0 -9999rem;
 	padding: 10px 50px 70px 50px; 
 	text-align: center;
 	background-color: blue;
