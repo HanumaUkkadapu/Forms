@@ -123,6 +123,10 @@ button:hover {
 	  background-color: var(--green2);
 	}
 }
+/* highlighting the radio/checkbox selected */
+input:checked + span {
+	color: blue;
+}
 /* fallback 30%/70% float layout */
 /*
 input, output, textarea, select, button {
