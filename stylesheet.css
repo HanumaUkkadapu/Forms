@@ -1,49 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum:400,700|Francois+One|Montserrat:400,700|Roboto:400,700');
 /* basic styles */
 :root{
-	--gray1: #EDEDED;
+  	--gray1: #EDEDED;
 	--gray2: #3F3F3F;
-	--green1: #179503;
+  	--green1: #179503;
 	--green2: #009933; /* hsl(140,100%,30%) */
-	--blue1: #0758B5;
-	--blue2: #0002AD;
-	--blue3: #000175;
+  	--blue1: #0758B5;
+  	--blue2: #0002AD;
+  	--blue3: #000175;
 	--blue4: #006599;
 	--blueglow: #00A9FF; /* rgb(0, 169, 255) */
 	--greenglow: #00FF55; /* rgb(0, 255, 85) */
 	--bluelight: #7FAAFF; /* rgb(127, 170, 255) */
 	--greenglowlight: #32FF77;/* rgb(76, 255, 136) */
 }
-/*
-body {
-	background-color: var(--bluelight);
-}
-*/
-html, body{
-	margin: 0px;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
 body{
 	background: orange;
+	margin: 0;
+	padding: 0;
 }
 .header {
-	width: 100%;
-	color: yellow;
+	color: whitesmoke;
 	font-size: 1.1em;
-	/* add back negative margin value */
-	/*margin: -10px;*/
-	padding: 10px 0px 70px 0px;
+	/*margin: -8px;*/
+	padding: 10px 0 70px 0; 
 	text-align: center;
 	background-color: blue;
-	min-width: 500px;
+	min-width: 440px;
 }
 h1 {
 	font-family: 'Francois One';
-	
+	letter-spacing: 0.025em;
 }
 h1 + p {
 	font-family: Cuprum;
@@ -63,17 +50,21 @@ input, select, textarea {
 	padding: 5px;
 	font-family: 'Roboto';
 	border: none;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #CCC;
 	background: none;
 	outline: none;
 }
 input:focus, textarea:focus, select:focus{
-	border-bottom-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 1px solid #CCC;
 	animation-name: bordercolorchange;
-	animation-duration: 300ms;
+	animation-duration: 100ms;
 	animation-fill-mode: forwards;
 }
 @keyframes bordercolorchange {
+	25%{
+		border-bottom: 2px solid #CCC;
+	}
 	100%{
 		border-bottom: 2px solid red;
 	}
@@ -91,29 +82,25 @@ span {
 	font-family: Roboto;
 }
 button {
-	margin: 10px 30% 10px 30%;
 	width: 40%;
-	text-align: center;
+	margin: 10px 30% 10px 30%;
 	padding: 5px;
 	border: none;
 	border-radius: 5px;
-	background-image: linear-gradient(to bottom right, rgba(255,0,0,0.75), rgba(255,255,0,0.75));
-	font-family: Cuprum;
+	background-color: #CCC;
+	font-family: 'Cuprum';
 	font-weight: bold;
 	font-size: 1.1em;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.19);
+	cursor: pointer;
 }
 button:hover {
 	animation-name: buttonhover;
-	animation-duration: 300ms;
+	animation-duration: 200ms;
 	animation-fill-mode: forwards;
 }
-/*for smoother animation feel, @keyframes has been used */
 @keyframes buttonhover {
-	5%{
-		background-image: none;
-	  color: black;
-	  background-color: hsl(140,100%,30%);
-	}
 	100%{
 		background-image: none;
 	  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -121,33 +108,31 @@ button:hover {
 	  background-color: var(--green2);
 	}
 }
-/* highlighting the radio/checkbox selected */
 input:checked + span {
+	font-weight: bold;
 	color: blue;
 }
 /* fallback 30%/70% float layout */
-/*
-input, output, textarea, select, button {
-	  clear: both;
-	  float: right;
-	  width: 70%;
+/*input, output, textarea, select, button {
+  clear: both;
+  float: right;
+  width: 70%;
 }
 label {
-	  float: left;
-	  width: 30%;
-	  text-align: right;
-	  padding: 0.25em 1em 0 0;
+  float: left;
+  width: 30%;
+  text-align: right;
+  padding: 0.25em 1em 0 0;
 }
 input[type="checkbox"], input[type="radio"] {
-	  width: auto;
-	  float: left;
-	  margin: 0.5em 0.5em 0 30%;
+  width: auto;
+  float: left;
+  margin: 0.5em 0.5em 0 30%;
 }
 input[type="checkbox"] + label, input[type="radio"] + label {
-	  width: auto;
-	  text-align: left;
-}
-*/
+  width: auto;
+  text-align: left;
+}*/
 /* grid layout */
 .formgrid {
 	padding: 10px;
@@ -201,16 +186,27 @@ label[for="checkbox"] {
 label[for="comments"] {
 	grid-row: 16/19;
 	text-align: right;
+	padding-left: 100px;
 }
 /*
 textarea {
 	height: 50px;
 }
 */
+@media (max-width: 1200px){
+	label[for="comments"]{
+		padding-left: 30px;
+	}
+}
+@media (max-width: 900px){
+	label[for="comments"]{
+		padding-left: 0px;
+	}
+}
 @media(max-width: 800px) {
 	#card {
 		margin: 10px 80px 10px 80px;
-		padding: 10px 60px 10px 60px;
+		padding: 10px 60px 20px 60px;
 	}
 	button {
 		margin: 0 30% 0 30%;
@@ -220,7 +216,7 @@ textarea {
 }
 @media(max-width: 720px) {
 	#card {
-		padding: 10px 40px 10px 20px;
+		padding: 10px 40px 20px 20px;
 	}
 	button {
 		margin: 0 30% 0 30%;
@@ -231,12 +227,12 @@ textarea {
 @media(max-width: 680px) {
 	#card {
 		margin: 10px 50px 10px 50px;
-		padding: 10px 20px 10px 20px;
+		padding: 10px 20px 20px 20px;
 	}
 }
 @media(max-width: 600px) {
 	#card{
-		padding: 10px 25px 10px 25px;
+		padding: 10px 25px 20px 25px;
 	}
 	.formgrid {
 		padding: 10px 5px 10px 5px;
@@ -280,5 +276,6 @@ textarea {
 	}
 	textarea + p {
 		margin: 5px;
+		justify-self: start;
 	}
 }
