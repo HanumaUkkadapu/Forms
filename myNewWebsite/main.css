@@ -1,0 +1,79 @@
+body{
+	
+}
+a{
+	font-family: "Open Sans", sans-serif;
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	color: hsl(130,100%,30%);
+}
+h1{
+	color: hsl(280, 100%, 40%);
+	font-family: Montserrat, sans-serif;
+}
+h1:hover{
+	color: hsl(280,100%,55%);
+}
+h2{
+	font-family: "Roboto Condensed", sans-serif;
+}
+p{
+	font-family: "Open Sans", sans-serif;
+}
+section p{
+	text-indent: 5%;
+}
+footer{
+    padding: 20px 5px 5px 10px;
+}
+
+a:hover{
+	color: hsl(130,100%,30%);
+}
+h1:hover{
+	color: hsl(280,100%,55%);
+}
+#author-head{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.2em;
+}
+#author{
+	text-align: center;
+	border: 1px black solid;
+	padding: 5px 5px 5px 5px;
+}
+#author:hover{
+	animation-name: auth;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+    /*for smoother animation feel, @keyframes has been used */
+@keyframes auth{
+	100%{
+	  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	  color: #FFFFFF;
+	  background-color: hsl(140,100%,30%);
+	}
+}
+	/*this changes the colour and shadow of the author element after mouse hover but doesn't give smoother look like @keyframes */
+/*#author:hover{
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	color: #FFFFFF;
+	background-color: hsl(140,100%,30%);
+}*/
+#copyright{
+	font-family: "Roboto Condensed", sans-serif;
+	padding-top: 25px;
+	padding-left: 10px;
+}
+#container{
+	/*display: flex;*/
+	margin: 0% 20% 5% 20%;
+	/*padding: 5% 25% 5% 25%;*/
+}
+#main{
+	position: relative;
+	padding: 2% 25% 2% 25%;
+}
