@@ -20,12 +20,12 @@ body{
 	padding: 0;
 }
 .header {
-	color: whitesmoke;
-	font-size: 1.1em;
 	/*margin: -8px;*/
 	padding: 10px 0 70px 0; 
+	background-color: #6200EE;
+	color: whitesmoke;
+	font-size: 1.1em;
 	text-align: center;
-	background-color: blue;
 	min-width: 440px;
 }
 h1 {
@@ -36,15 +36,13 @@ h1 + p {
 	font-family: Cuprum;
 }
 #card {
+	border-top: 5px solid rgb(140,140,255); 
 	background-color: var(--gray1);
 	margin: 10px 15% 10px 15%;
 	padding: 10px 60px 10px 60px;
 	min-width: 300px;
 	position: relative;
 	top: -70px;
-}
-legend {
-	font-family: Cuprum;
 }
 input, select, textarea {
 	padding: 5px;
@@ -54,21 +52,25 @@ input, select, textarea {
 	background: none;
 	outline: none;
 }
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus {
 	border: none;
 	border-bottom: 1px solid #CCC;
 	animation-name: bordercolorchange;
 	animation-duration: 100ms;
 	animation-fill-mode: forwards;
 }
+input[type="email"]:valid {
+	border-bottom: 2px solid hsl(140,100%,30%);
+}
 @keyframes bordercolorchange {
 	25%{
 		border-bottom: 2px solid #CCC;
 	}
 	100%{
-		border-bottom: 2px solid red;
+		border-bottom: 2px solid #6200EE;
 	}
 }
+
 textarea + p {
 	font-family: Roboto;
 	font-size: 0.8em;
@@ -188,11 +190,6 @@ label[for="comments"] {
 	text-align: right;
 	padding-left: 100px;
 }
-/*
-textarea {
-	height: 50px;
-}
-*/
 @media (max-width: 1200px){
 	label[for="comments"]{
 		padding-left: 30px;
