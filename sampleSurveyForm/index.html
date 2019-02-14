@@ -1,1 +1,62 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample Survey Form</title>
+    		<link rel="stylesheet" type="text/css" href="https://hanumaukkadapu.github.io/sampleSurveyForm/stylesheet.css" /> 
+	</head>
+  	<body>
+    	<section class="header">
+		<h1 id="title" >Hello</h1>
+		<p id="description">This is going to be a Sampe Survey Form</p>
+	</section>
+	<section class="form" id="card">
+		<form id="survey-form" action="get">
+    <!--<legend>This is the sample survey form</legend>-->
+    			<div class="formgrid">
+				<!-- Name-->
+				<label for="name" id="name-label">* Name : </label>
+				<input id="name" name="name" type="text" placeholder="Need your name..!" required />
+				<!-- Email-->
+				<label for="email" id="email-label">* Email : </label>
+				<input id="email" name="email" type="email" placeholder="example@123.com" required />
+				<!-- Age-->
+				<label for="number" id="number-label"> Age : </label>
+				<input id="number" name="number" type="number" min="1" max="150" placeholder="Age please..!" />
+				<!-- dropdown for occupation-->
+				<label for="dropdown">Occupation : </label>
+			        <select id="dropdown" name="occupation">
+					<option disabled selected >Select an Option</option>
+					<option value="1">1 year or less</option>
+					<option value="2">2 years</option>
+					<option value="3">3 - 4 years</option>
+					<option value="5">5 years or more</option>
+				</select>
+				<!-- Radio-->
+				<label for="radio">Options : </label>
+				<input name="gender" type="radio" value="male" /><span>Male</span>
+				<input name="gender" type="radio" value="female" /><span>Female</span>
+				<input name="gender" type="radio" value="other" /><span>Other</span>
+				<!-- Checkboxes-->
+				<label for="checkbox">Improvements : </label>
+	      			<input id="html" name="html" type="checkbox" value="html" /><span>HTML</span>
+			      	<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="css" name="css" type="checkbox" value="css" /><span>CSS</span>
+				<input id="javascript" name="javascript" type="checkbox" value="js" /><span>JavaScript</span>
+				<!-- Text area for comments-->
+				<label for="comments" >Comments and Suggestions if any : </label>
+	      			<textarea id="comments" name="comments" cols="20"></textarea>
+				<p id="mandatory"> * marked fields are mandatory</p>
+			</div>
+      				<button id="submit" type="submit">SUBMIT</button>
+			</form>
+		</section>
+		<p>This layout applies CSS Grid in all browsers which support it. It adapts well to any font or screen sizing.</p>
+  	</body>
+	<!--
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	-->
+</html>
