@@ -116,7 +116,7 @@ input:valid{
 */
 input:valid ~ .focusbar::before{
 	content: '';
-	height: 2px;
+	height: 1px;
 	background-color: green;
 }
 /*
