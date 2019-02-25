@@ -75,8 +75,9 @@ input{
 	font-size: 16px;
 	height: 56px;
 	width: 500px;
-	background: none;
+	background: #DDD;
 	border: none;
+	border-radius: 10px 10px 0 0;
 	padding: 8px 12px 0px 12px;
 }
 label{
@@ -99,13 +100,16 @@ label[for="email"]{
 	left: 100px;
 }
 
+/*
 input:hover{
 	background-color: var(--input--hover--backgroundcolor);
 }
+*/
 input:focus{
 	outline: none;
 	background-color: var(--input--focus--backgroundcolor);
 }
+/*
 input:valid{
 	background: none;
 }
