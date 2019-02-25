@@ -113,19 +113,17 @@ input:focus{
 input:valid{
 	background: none;
 }
-/*
+*/
 input:valid ~ .focusbar::before{
 	content: '';
 	height: 2px;
 	background-color: green;
 }
+/*
 input:invalid ~ .focusbar::before{
 	content: '';
 	height: 2px;
 	background-color: #b22;
-}
-input:valid ~ *{
-	color: green;
 }
 input:invalid{
 	background: #c100001f;
@@ -134,17 +132,18 @@ input:invalid{
 #name:focus + label, #name:valid + label {
 	top: 70px;
 	left: 100px;
-	font-size: 12px;
-	color: blue;
 }
 #email:focus + label, #email:valid + label {
 	top: 154px;
 	left: 100px;
+}
+input:focus + label{
 	font-size: 12px;
 	color: blue;
 }
-input:focus + label{
-	color: blue;
+input:valid ~ label{
+	font-size: 12px;
+	color: green;
 }
 /*
 input:invalid ~ *{
