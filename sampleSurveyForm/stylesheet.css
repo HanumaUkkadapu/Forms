@@ -229,7 +229,7 @@ label[for="comments"] {
 }
 @media(max-width: 480px) {
 	.header{
-		width: 100%;
+		width: 400px;
 	}
 	#card{
 		width: auto;
