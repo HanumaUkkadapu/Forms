@@ -1,164 +1,207 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+/*
+https://www.quackit.com/css/css_color_codes.cfm
+https://www.w3schools.com/css/css_colors.asp
+*/
 
 :root{
 	
+	/*fab elements*/
+	--fab--color--purple: hsl(263, 71%, 47%); /* #6A36BC / #63C  /d-32% */ 
+	--fab--color--green: hsl(150, 74%, 35%); /* #179D59 / #096 */
+	--fab--color--orange: hsl(35, 97%, 51%); /* #FB9707 / #F90 */
+	
 	/* Header */
-	--header--backgroundcolor: #673A;
-	--header--padding: 20px 50px 70px 50px;
+	/* This will be used to change
+	 * the color of the entire form 
+	*/
+	--header--backgroundcolor: #673A;  /*#673A*/
+	--header--padding--bottom: 50px;
 	
 	/* form */
-	--form--backgroundcolor: #EEE;
-	--form--top: -70px; /* Same as header padding bottom */
+	--form--top: calc(var(--header--padding--bottom)*(-1)); /* Same as header padding bottom */
 	--form--width: 700px;
 	--form--margin: 20px auto;
 	--form--padding: 50px 0;
-	--form--bordertop--color: #674;
+	--form--bordertop--color: #674; /*#674*/
 	
 		/* input */
-		--input--hover--backgroundcolor: #DDD;
-		--input--focus--backgroundcolor: #CCC;
+		--input--hover--backgroundcolor: #D7D7D7;
+		--input--focus--backgroundcolor: #D7D7D7;
 	
 		/* label */
-		--label--color: #999; /* can be used for sidebars too */
+		--label--color: #888; /* can be used for sidebars too */
 		
 		/* Sidebar */
 		--sidebar--padding: 10px;
 		
 		/* focusbar properties */
-		--focusbar--before-after--width: 524px;
-	
-	
-	
-	
-	/* font sizes */
-	--fs--normal: 16px;
-	
+		--focusbar--before-after--width: 528px;
 }
 body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
-.header{
+header{
+	width: 100%;
 	color: whitesmoke;
 	background-color: var(--header--backgroundcolor);
-	padding: var(--header--padding);
+	padding: 20px 50px var(--header--padding--bottom) 50px;
 	text-align: center;
 }
-.footer{
+footer{
 	height: 100px;
 	width: 100%;
 	background-color: #CCC;
 }
+
+.container{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
 .form-card{
-	width: var(--form--width);
-	background-color: var(--form--backgroundcolor);
-	border-top: 4px solid var(--form--bordertop--color);
-	margin: var(--form--margin);
-	padding: var(--form--padding); /* do not change this */
-	top: var(--form--top);
-	text-align: center;
 	position: relative;
+	top: var(--form--top);
+	width: var(--form--width);
+	padding: var(--form--padding); /* do not change this */
+	background-color: #EEE;
+	text-align: center;
+	border-top: 5px solid var(--form--bordertop--color);
 	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
 .sidebar{
-	--sidebar--bordercolor: var(--form--backgroundcolor);
+	--sidebar--bordercolor: #EEE;
 	background: none;
 	text-align: center;
 	padding: var(--sidebar--padding);
 	border-right: 4px solid var(--sidebar--bordercolor);
 	border-left: 4px solid var(--sidebar--bordercolor);
+	transition: border-left-color 150ms 50ms ease-out;
+}
+.sidebar:hover, .sidebar:focus{
+	border-left-color: blue;
+}
+.colorbtn{
+	font-size: 0.92em;
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 30px;
+	width: 30px;
+	padding: 10px;
+	color: #000;
+	background: #FFF;
+	border-radius: 50%;
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+	z-index: 999;
+}
+.colorbtn:hover{
+	box-shadow: 0 4px 6px -1px rgba(0,0,0,.2), 0 8px 10px 2px rgba(0,0,0,.14), 0 4px 18px 0 rgba(0,0,0,.12);
+}
+.colorlistitems{
+	position: fixed;
+	cursor: pointer;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+	border: 3px solid #EFEFEF;
+	border-radius: 50%;
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+	z-index: 990;
+}
+.colorlistitems:focus{
+	outline: none;
+}
+#purple{
+	top: 10px;
+	right: 85px;
+	background: var(--fab--color--purple); /* #6A3CB6 */
+}
+#green{
+	top: 65px;
+	right: 65px;
+	background: var(--fab--color--green); /* #179d59 */
+}
+#orange{
+	top: 85px;
+	right: 10px;
+	background: var(--fab--color--orange); /* #FB9707 */
 }
 
 input{
-	display: inline block;
 	font-size: 16px;
 	height: 56px;
-	width: 500px;
-	background: #DDD;
+	width: 75%;
+	background: #E0E0E0;
 	border: none;
-	border-radius: 10px 10px 0 0;
+	border-radius: 8px 8px 0 0;
 	padding: 8px 12px 0px 12px;
+	display: inline block;
 }
 label{
+	position: absolute;
+	left: 100px;
+	width: 0;
+	color: var(--label--color);
+	background: none;
+	font-size: 16px;
 	text-align: left;
 	pointer-events: none;
-	font-size: 16px;
+	
 	display: block;
-	color: var(--label--color);
-	width: 0;
-	background: none;
-	position: absolute;
 	transition: all 200ms ease-out;
 }
 label[for="name"]{
 	top: 82px;
-	left: 100px;
 }
 label[for="email"]{
 	top: 166px;
-	left: 100px;
 }
 
-/*
 input:hover{
 	background-color: var(--input--hover--backgroundcolor);
 }
-*/
 input:focus{
 	outline: none;
 	background-color: var(--input--focus--backgroundcolor);
 }
-/*
 input:valid{
 	background: none;
 }
-*/
-input:valid ~ .focusbar::before{
-	content: '';
-	height: 1px;
-	background-color: green;
-}
-/*
-input:invalid ~ .focusbar::before{
-	content: '';
-	height: 2px;
-	background-color: #b22;
-}
-input:invalid{
-	background: #c100001f;
-}
-*/
-#name:focus + label, #name:valid + label {
-	top: 70px;
+input:focus + label, input:valid + label{
+	left: 98px;
 	font-size: 12px;
-}
-#email:focus + label, #email:valid + label {
-	top: 153px;
-	font-size: 12px;
-}
-input:focus + label{
 	color: blue;
 }
-input:valid ~ *{
-	color: green;
+#name:focus + label, #name:valid + label {
+	top: 70px;
 }
-/*
-input:invalid ~ *{
-	color: #b22;
+#email:focus + label, #email:valid + label {
+	top: 154px;
 }
-*/
+
 
 .focusbar{
 	position: absolute;
 }
 .focusbar::after, .focusbar::before {
 	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 72px;
 	height: 1px;
 	width: var(--focusbar--before-after--width);
-	position: absolute;
-	left: 74px;
-	bottom: 0;
 	background-color: #9A9A9A;
 }
 .focusbar::after{
@@ -190,3 +233,35 @@ input:focus ~ .focusbar::after{
 /*
 boxshadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 */
+
+@media(max-width: 800px){
+	.form-card{
+		width: 600px;
+	}
+	input{
+		width: 80%;
+		height: 48px;
+	}
+	.focusbar::before, .focusbar::after{
+		left: 45px;
+		width: 480px;
+	}
+	label{
+		left: 72px;
+	}
+	label[for="name"]{
+		top: 80px;
+	}
+	label[for="email"]{
+		top: 155px;
+	}
+	input:focus + label, input:valid + label{
+		left: 70px;
+	}
+	#name:focus + label, #name:valid + label {
+		top: 68px;
+	}
+	#email:focus + label, #email:valid + label {
+		top: 144px;
+	}
+}
