@@ -6,34 +6,48 @@
     <link rel = "stylesheet" type = "text/css" href = "https://hanumaukkadapu.github.io/Forms/sampleGoogle/stylesheet.css" />
   </head>
   <body>
-    <section class="header">
+    <header>
       <h1 id="form-head"> Form </h1>
       <p id="form-description"> A Google like sample Form </p>
-    </section>
+      <section>
+        <div class="colorbtn" onclick="coloritems()" ><i id="fabicon" class="fas fa-palette fa-2x"></i></div>
+        <div class="colorlist" id="colorlist" style="display: none;">
+          <div><button class="colorlistitems" id="purple" value="purple"></button></div>
+          <div><button class="colorlistitems" id="green" value="green"></button></div>
+          <div><button class="colorlistitems" id="orange" value="orange"></button></div>
+        </div>
+      </section>
+    </header>
     <section class="form-sec">
-      <div class="form-card">
-        <form>
 
-          <div class="sidebar">
-            <input type="text" id="name" required />
-            <label for="name" >Name</label>
-            <div class="focusbar" ></div>
-          </div>
+      <div class="container">
+        <div class="form-card">
 
-          <div class="sidebar">
-            <input type="email" id="email" required />
-            <label for="email" >Email</label>
-            <div class="focusbar" ></div>
-          </div>
+          <form>
 
-        </form>
+            <div class="sidebar">
+              <input type="text" id="name" required />
+              <label for="name" >Name</label>
+              <div class="focusbar" ></div>
+            </div>
+
+            <div class="sidebar">
+              <input type="email" id="email" required />
+              <label for="email" >Email</label>
+              <div class="focusbar" ></div>
+            </div>
+
+          </form>
+
+        </div>
       </div>
+
     </section>
-    <section class="footer" >
+    <footer>
       <div id="footer-div">
 
       </div>
-    </section>
+    </footer>
   </body>
   <script type="text/javascript" src="https://hanumaukkadapu.github.io/Forms/sampleGoogle/script.js"></script>
 </html>
