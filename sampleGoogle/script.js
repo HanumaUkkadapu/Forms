@@ -52,5 +52,5 @@ function sizeCheck(){
 		foot1.innerHTML = snew[0];
 	}
 }
-Window.setTimeoout(sizeCheck,1000ms);
+Window.setInterval(sizeCheck,1000ms);
 
