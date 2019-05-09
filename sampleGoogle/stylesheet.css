@@ -42,7 +42,7 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
-	min-width: 440px;
+	min-width: 360px;
 	
 	display: flex;
 	flex-flow: column nowrap;
