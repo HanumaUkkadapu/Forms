@@ -46,6 +46,7 @@ function defaultHeaderColor(){
 
 var s = [root.clientWidth, root.clientHeight];
 var foot1 = document.getElementById('footer-element');
+foot1.innerHTML = s[0]; //for printing for the first time
 function sizeCheck(){
 	var snew = [root.clientWidth, root.clientHeight];
 	if(s[0] != snew[0]){
