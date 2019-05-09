@@ -43,3 +43,14 @@ function defaultHeaderColor(){
 	root.style.setProperty('--header--backgroundcolor', '#673A');
 	root.style.setProperty('--form--bordertop--color', '#674');
 }
+
+var s = [root.clientWidth, root.clientHeight];
+var foot1 = document.getElementById('footer-element');
+function sizeCheck(){
+	var snew = [root.clientWidth, root.clientHeight];
+	if(s[0] != snew[0]){
+		foot1.innerHTML = snew[0];
+	}
+}
+setTimeoout(sizeCheck,1000ms);
+
