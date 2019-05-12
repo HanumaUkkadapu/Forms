@@ -43,7 +43,8 @@ body{
 	padding: 0;
 	font-family: 'Roboto';
 	min-width: 360px;
-	
+}
+body, footer{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
