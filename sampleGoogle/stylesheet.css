@@ -364,3 +364,38 @@ boxshadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 		top: 129px;
 	}
 }
+
+@media(max-width: 400px){
+	.form-card{
+		width: 320px;
+	}
+	input{
+		font-size: 12px;
+		width: 80%;
+		height: 36px;
+	}
+	.focusbar::before, .focusbar::after{
+		left: 19px;
+		width: 274px;
+	}
+	label{
+		font-size: 13px;
+		left: 46px;
+	}
+	label[for="name"]{
+		top: 75px;
+	}
+	label[for="email"]{
+		top: 140px;
+	}
+	input:focus + label, input:valid + label{
+		font-size: 10px;
+		left: 45px;
+	}
+	#name:focus + label, #name:valid + label {
+		top: 64px;
+	}
+	#email:focus + label, #email:valid + label {
+		top: 129px;
+	}
+}
