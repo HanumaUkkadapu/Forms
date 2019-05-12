@@ -209,7 +209,7 @@ input:focus + label, input:valid + label{
 	height: 2px;
 	background-color: blue;
 	transform: scalex(0);
-	transition: transform 200ms ease-in-out, height 0ms;
+	transition: transform 200ms cubic-bezier(.5,0,.15,1), height 0ms;
 }
 input:focus ~ .focusbar::after{
 	transform: scalex(1);
