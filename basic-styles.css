@@ -5,17 +5,26 @@ html, body{
   padding: 0;
 }
 body{
-  padding: 10px;
   text-align: center;
 }
 h1{
   font-family: 'Roboto Slab';
+  font-weight: 700;
+}
+#forms-list{
+  list-style: none;
+}
+#forms-list li{
+  font-family: 'Roboto Condensed';
+  margin: 5px;
+  padding: 5px;
 }
 a{
   text-decoration: none;
   color: #666;
-  transition: color 150ms ease-out;
+  transition: color 150ms ease-out, filter 150ms ease-out;
 }
 a:hover{
   color: black;
+  filter: drop-shadow(0 0  4px rgba(0,0,0,0.5));
 }
