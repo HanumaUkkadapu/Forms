@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab:400,700');
 
+*{
+  box-sizing: border-box;
+}
 html, body{
   margin: 0;
   padding: 0;
@@ -7,7 +10,18 @@ html, body{
 body{
   font-family: 'Roboto';
   text-align: center;
-  padding-top: 10px;
+  width: 100vw;
+  min-width: 480px;
+  height: 100vh;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+}
+body > *{
+  width: 80%;
+  max-width: 300px; 
 }
 h1{
   font-family: 'Roboto Slab';
@@ -16,18 +30,23 @@ h1{
 ul{
   list-style: none;
   padding: 0;
+  
+  display: flex;
+  flex-flow: column nowrap;
 }
 ul li{
   font-family: 'Roboto Condensed';
-  margin: 5px;
-  padding: 5px;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
 }
 a{
-  text-decoration: none;
   color: #666;
-  transition: color 150ms ease-out, filter 150ms ease-out;
-}
-a:hover{
-  color: black;
-  filter: drop-shadow(0 0  4px rgba(0,0,0,0.5));
+  background: #f8f8f8;/*f88*/
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
 }
