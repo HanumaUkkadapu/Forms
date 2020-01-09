@@ -26,6 +26,8 @@ body > *{
 h1{
   font-family: 'Roboto Slab';
   font-weight: 700;
+  margin: 10px 0;
+  margin-top: 60px;
 }
 ul{
   list-style: none;
@@ -44,9 +46,10 @@ ul li{
   align-items: stretch;
 }
 a{
-  color: #77f;
+  color: #66f;
   background: #eef;/*f88*/
   padding: 8px;
+  border: 1px solid;
   border-radius: 8px;
   text-decoration: none;
 }
