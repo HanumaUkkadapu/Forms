@@ -36,6 +36,7 @@ ul{
 }
 ul li{
   font-family: 'Roboto Condensed';
+  margin: 5px;
   
   display: flex;
   flex-flow: column nowrap;
