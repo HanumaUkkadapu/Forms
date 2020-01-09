@@ -44,10 +44,9 @@ ul li{
   align-items: stretch;
 }
 a{
-  color: #666;
-  background: #f8f8f8;/*f88*/
+  color: #77f;
+  background: #eef;/*f88*/
   padding: 8px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   text-decoration: none;
 }
