@@ -12,10 +12,10 @@ h1{
   font-family: 'Roboto Slab';
   font-weight: 700;
 }
-#forms-list{
+ul{
   list-style: none;
 }
-#forms-list li{
+ul li{
   font-family: 'Roboto Condensed';
   margin: 5px;
   padding: 5px;
